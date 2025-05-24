@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  
+</head>
+<body>
+
+  <h2>Sayac</h2>
+  <div>
+    <button id="azalt">+</button>
+    <span id="sayi" style="margin: 0 15px; font-size: 24px;">0</span>
+    <button id="arttir">-</button>
+  </div>
+  <br>
+  <button id="sifirla">Sifirla</button>
+
+  <script>
+    const sayiElement = document.getElementById('sayi');
+    const arttirBtn = document.getElementById('azalt');
+    const azaltBtn = document.getElementById('arttir');
+    const sifirlaBtn = document.getElementById('sifirla');
+
+    let sayi = 0;
+
+    arttirBtn.addEventListener('click', () => {
+      sayi++;
+      sayiElement.textContent = sayi;
+    });
+
+    azaltBtn.addEventListener('click', () => {
+      sayi--;
+      sayiElement.textContent = sayi;
+    });
+
+    sifirlaBtn.addEventListener('click', () => {
+      sayi = 0;
+      sayiElement.textContent = sayi;
+    });
+  </script>
+
+</body>
+</html>
